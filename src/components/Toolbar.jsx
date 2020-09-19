@@ -1,19 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Toolbar(props) {
 
 let clNames = 'filter'
 
-function onSelectFilter() {
-    console.log("Ololo, I am hacker")
-  }
+const [selected, setState] = useState(false)
+
+const handleSelect = e => {
+  setState(selected = !selected)
+}
 
     return (
        <>
-        { props.filters.map((f, index, onSelectFilter) => {
+        { props.filters.map((f, index) => {
             return <div className={clNames} 
             key={index}
-            onClick={() => onSelectFilter()}
+            onClick={handleSelect}
             >{f.name}</div>
         }) }
        </>
