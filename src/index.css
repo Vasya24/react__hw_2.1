@@ -30,3 +30,12 @@ body {
 img {
   margin: 0.1rem
 }
+
+.filtered {
+  display: none
+}
+
+.selected {
+  color: #FCF8F3;
+  background-color: #555555;
+}
